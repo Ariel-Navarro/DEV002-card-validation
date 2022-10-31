@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 60%;
+  background-color: #003197;
+  margin-bottom: 30px;
+  position: relative;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.42)
+}
+.items {
+  position: absolute;
+  text-align: center;
+  flex-direction: column;
+  margin-top: -10%;
+}
+.tarjeta-gold {
+  margin-left: 100%;
+}
+.logo {
+  margin-top: 3em;
+  margin-left: 3em;
+  position: relative;
+
+}
+.párrafo {
+  font-size: 20px;
+
+
+  margin-top: 45px;
+  margin-right: -140%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}
+.laptop {
+  position: absolute;
+  margin-top: 51%;
+  margin-left: 14%;
+}
+.right {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-color: #f6f6f6;
+}
+.tarjeta-con-diseño {
+  display: flex;
+}
+.datos {
+font-size: 15px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.boton {
+  margin-top: 40px;
+  background-color: #3DC35B;
+  width: 70px;
+  height: 30px;
+}

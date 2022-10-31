@@ -6,9 +6,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <section class="section">
+    <section class="left">
+        <img class="logo" src="img/logo.bcp.png" width="100px"/>
+     <div class="items">
+      <img class="tarjeta-gold"src="img/tarjeta-gold.png" width="150px"/>
+      <p class="párrafo">
+        Bienvenida(o) a tu página de <br> banca de confianza
+      </p>
+      <p class="párrafo">
+        Ingresa tus datos para verificar tu <br> tarjeta de crédito
+      </p>
+      </div>
+      <img class="laptop" src="img/laptop png mac.png" width="300px"/>
+    </section>
+
+    <section class="right">
+      <div>
+        <img class="tarjeta-con-diseño" src="img/tarjeta-con-diseño (2).jpg" width="400px"/>
+      </div>
+      <div>
+        <label class="datos" for="numero">Ingrese su número de tarjeta</label><br><br>
+        <input id="numero" value="1234567891234567" minlength="16" maxlength="16" type="text" placeholder="#### #### #### 1234">
+      </div>
+      <br>
+      <br>
+      <div>
+        <label class="datos" for="name">Ingrese su nombre completo</label><br><br>
+        <input id="name" value="Ariel Navarro"  type="text" placeholder="Ariel Kristal Navarro Monzón">
+      </div>
+      <input id="enviar" class="boton" type="submit"/>
+    </section>
+    </section>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
