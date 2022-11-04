@@ -1,20 +1,20 @@
 const validator = {
-  isValid: function (creditCardNumber) {
+  isValid: function (param) {
     //  Para que me devuelva un array, split me devuelve separados los elementos de una cadena en un array
-  let arrayNumeros = valorNumTarj.split('');
-  console.log(arrayNumeros)
+  let arrayNumeros = param.split('');
+  // console.log(arrayNumeros)
 
   // Revertimos el orden del array
   arrayNumeros.reverse();
-  console.log(arrayNumeros)
+  // console.log(arrayNumeros)
 
   // para iterar en el array y lo convierto en número
   let test = arrayNumeros.map((elemento) => {
     return Number(elemento);
   })
-  console.log(test)
+  // console.log(test)
 
-  let estaSi= test.map((elemento,index)=>{
+  let findIndex= test.map((elemento,index)=>{
     if (index%2 !=0 ){
       return elemento*2;
     }
@@ -23,13 +23,13 @@ const validator = {
     }
 
   })
-  console.log(estaSi)
+  // console.log(findIndex)
 
   const initialValue=0
-  let sumaTotal= estaSi.reduce((a,b) =>{
+  let sumaTotal= findIndex.reduce((a,b) =>{
      return a + b
   },initialValue)
-  console.log (sumaTotal)
+  // console.log (sumaTotal)
 
   let resultado =()=>{
     if (sumaTotal %10===0){
@@ -39,10 +39,20 @@ const validator = {
       return false
     }
   };
-  resultado();
-  }
-  mastify: function (creditCardNumber) {
-    wwwwwww
+  return resultado();
+  },
+
+
+  maskify: function (param) {
+    // if (param=" "){
+    // alert("Escriba aquí tu número de tarjeta")
+    // }
+    // else{
+      let lastFour= param.slice(-4);
+      console.log(lastFour)
+      let relleno= lastFour.padStart(param.length,"#");
+      console.log(relleno)
+    // }
   }
 };
 

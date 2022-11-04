@@ -8,54 +8,35 @@ botonEnviar.addEventListener('click', () => {
   // Capturo el valor del input
   let valorNumTarj = document.getElementById('numero').value;
 
-  //  Para que me devuelva un array, split me devuelve separados los elementos de una cadena en un array
-  let arrayNumeros = valorNumTarj.split('');
-  console.log(arrayNumeros)
+  validator.isValid(valorNumTarj)
+  validator.maskify(valorNumTarj)
+  // console.log(validator.isValid(valorNumTarj))
 
-  // Revertimos el orden del array
-  arrayNumeros.reverse();
-  console.log(arrayNumeros)
+  if (validator.isValid(valorNumTarj) === true){
+    alert("No tienes cobros pendientes")
+  }
+  else {
+    alert("Su número de tarjeta no es válido. Haga click aquí para concocer su problema  https://www.viabcp.com/ayuda-bcp")
+  }
 
-  // para iterar en el array y lo convierto en número
-  let test = arrayNumeros.map((elemento) => {
-    return Number(elemento);
-  })
-  console.log(test)
-
-  let estaSi= test.map((elemento,index)=>{
-    if (index%2 !=0 ){
-      return elemento*2;
-    }
-    else {
-      return elemento
-    }
-
-  })
-  console.log(estaSi)
-
-  const initialValue=0
-  let sumaTotal= estaSi.reduce((a,b) =>{
-     return a + b
-  },initialValue)
-  console.log (sumaTotal)
-
-  let resultado =()=>{
-    if (sumaTotal %10===0){
-     return alert("si")
-    }
-    else {
-      return alert("no")
-    }
-  };
-  resultado();
 });
+
+// form.addEventListener("submit",(e) =>{
+//   let mensaje= []
+//   if (valorNumTarj.value===" "|| valorNumTarj.value==null){
+//     mensaje.push("Número de tarjeta es requerido")
+//   }
+
+//   if(mensaje.length < 16){
+//     e.preventDeFault()
+//     errorElement.innerText= mensaje.join (",")
+//   }
+// })
+
 
 console.log(validator);
 
-// setTimeout(function(){
-//    return resultado();
-// },2000);
-// })
+
 // console.log (test[2]*=2)
 //   for (let i = 1; i < test.length; i += 2) {
 //     console.log(test[i], i)
