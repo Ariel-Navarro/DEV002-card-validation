@@ -8,9 +8,8 @@ botonEnviar.addEventListener('click', () => {
   // Capturo el valor del input
   let valorNumTarj = document.getElementById('numero').value;
 
-  // validator.isValid(valorNumTarj)
+  validator.isValid(valorNumTarj)
   validator.maskify(valorNumTarj)
-  // console.log(validator.isValid(valorNumTarj))
 
   if (validator.isValid(valorNumTarj) === true){
     alert("No tienes cobros pendientes")
